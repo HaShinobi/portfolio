@@ -74,7 +74,7 @@ const experiences = [
 const skills = [
   { category: "Programming Languages", items: ["Python", "C++", "JavaScript", "HTML5", "CSS3"] },
   { category: "Machine Learning", items: ["PyTorch", "TensorFlow", "scikit-learn", "NumPy", "Pandas"] },
-  { category: "Deployment & Cloud", items: ["Docker", "Linux"] },
+  { category: "Deployment & Cloud", items: ["Docker", "Linux", "GitHub"] },
   {category: "Engineering", items: ["3D Design (CAD, modeling)", "3D Printing", "Arduino", "Microcontrollers"]}
 ];
 

@@ -117,7 +117,7 @@ export default function App() {
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-[240px,1fr] gap-8 items-start">
             <img
-              src={profile.avatar}
+              src="public/Hashem Altujar.jpg"  // image placed inside public/
               alt="Avatar"
               className="aspect-square w-60 rounded-2xl object-cover border border-zinc-700 shadow"
             />

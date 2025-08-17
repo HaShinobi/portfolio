@@ -54,7 +54,7 @@ const profile = {
     "I'm a big fan of Shinobis, and enjoy practicing Cross Country and Competitive Programming in my free time.",
   ],
   avatar:
-    "src//assets//Hashem Altujar.jpg",
+    "public//Hashem Altujar.jpg",
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/", icon: "in" },
     { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },

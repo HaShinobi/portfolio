@@ -343,7 +343,7 @@ const projects = [
 // Empty strings won't render any buttons.
 const publications = [
   {
-    title: "Literature Review on Acoustic UAV Detection Pipelines and Signal-Processing Workflows",
+    title: "A Review of Acoustic Techniques for Drone Detection",
     venue: "IEEE SCC 2025",
     year: "2025",
     authors: "Hashem Altujar",

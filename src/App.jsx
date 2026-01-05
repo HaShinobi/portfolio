@@ -248,7 +248,7 @@ const experiences = [
     role: "Design & Assembly Lead",
     time: "10/2025 - Current",
     location: "Dhahran, Saudi Arabia",
-    logo: "/logos/KRT.png",
+    logo: "/KRT.png",
     bullets: [
       "Currently designing a 22 × 22 × 22 remote-controlled robot to compete in the annual VEX U Pushback 2025 Competition.",
       "Used AutoCAD to design the robot and assembled intake, outtake, and scoring mechanism through a system of motors, flex wheels, and pneumatics.",
@@ -259,7 +259,7 @@ const experiences = [
     role: "Research Student",
     time: "06/2025 - 10/2025",
     location: "KFUPM, Dhahran, Saudi Arabia",
-    logo: "/logos/KFUPM_INNOVATION_BLACK.png",
+    logo: "/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Designed and 3D-printed a weather-resistant sensor enclosure (AutoCAD, Fusion 360).",
       "Developed a hybrid drone-detection pipeline on NVIDIA Jetson Nano (Ubuntu) with real-time inference (15–20 FPS).",
@@ -272,7 +272,7 @@ const experiences = [
     role: "Research Student",
     time: "05/2025 - 10/2025",
     location: "KFUPM, Dhahran, Saudi Arabia",
-    logo: "/logos/KFUPM_INNOVATION_BLACK.png",
+    logo: "/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Primary author of a 2,700-word literature review on acoustic UAV detection pipelines and signal-processing workflows.",
       "Analyzed 20+ studies (2018–2024) and synthesized findings across noise filtering, feature engineering, classification, and cost effectiveness.",
@@ -316,9 +316,9 @@ const projects = [
     name: "Hybrid Drone Detection (Jetson Nano)",
     tagline: "Edge inference UAV detection with acoustic classification and DoA localization.",
     images: [
-      "/projects/Fusion_Drone_detection.png",
-      "/projects/drone_detection_1.png",
-      "/projects/drone_detection.png",
+      "/Fusion_Drone_detection.png",
+      "/drone_detection_1.png",
+      "/drone_detection.png",
     ],
     functionality: [
       "Real-time inference pipeline (15–20 FPS)",

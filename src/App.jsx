@@ -218,11 +218,6 @@ const profile = {
     { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
     { label: "ResearchGate", href: "https://www.researchgate.net/profile/Hashem-Altujar?ev=hdr_xprf", icon: "sc" },
     { label: "Resume", href: "https://drive.google.com/file/d/1arfHC63LRx2-I72njRYmZhHId3K7Cap2/view?usp=sharing", icon: "cv" },
-    // Internal jump links
-    { label: "Experience", href: "#experience", icon: "x" },
-    { label: "Projects", href: "#projects", icon: "x" },
-    { label: "Publications", href: "#publications", icon: "x" },
-    { label: "Skills", href: "#skills", icon: "x" },
     { label: "Contact", href: "#contact", icon: "x" },
   ],
 };
@@ -352,7 +347,7 @@ const publications = [
     badges: ["Published"],
     tags: ["UAV", "Acoustics", "Signal Processing", "Literature Review"],
     links: {
-      paper: "", // e.g. "https://ieeexplore.ieee.org/document/XXXXXXX"
+      paper: "https://www.researchgate.net/publication/398339228_A_Review_of_Acoustic_Techniques_for_Drone_Detection", // e.g. "https://ieeexplore.ieee.org/document/XXXXXXX"
       doi: "",
       code: "",
       slides: "",

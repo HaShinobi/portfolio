@@ -79,25 +79,13 @@ const ProjectCard = ({ p }) => (
 
         <div className="flex flex-wrap gap-2 shrink-0">
           {p.links?.github && (
-            <PillLink
-              href={p.links.github}
-              label="GitHub"
-              icon={<Logo kind="gh" />}
-            />
+            <PillLink href={p.links.github} label="GitHub" icon={<Logo kind="gh" />} />
           )}
           {p.links?.details && (
-            <PillLink
-              href={p.links.details}
-              label="More details"
-              icon={<span className="text-[12px]">↗</span>}
-            />
+            <PillLink href={p.links.details} label="More details" icon={<span className="text-[12px]">↗</span>} />
           )}
           {p.links?.demo && (
-            <PillLink
-              href={p.links.demo}
-              label="Live demo"
-              icon={<span className="text-[12px]">▶</span>}
-            />
+            <PillLink href={p.links.demo} label="Live demo" icon={<span className="text-[12px]">▶</span>} />
           )}
         </div>
       </div>
@@ -124,9 +112,7 @@ const ProjectCard = ({ p }) => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <div className="text-sm font-medium text-zinc-300 mb-2">
-            Functionality
-          </div>
+          <div className="text-sm font-medium text-zinc-300 mb-2">Functionality</div>
           <ul className="space-y-2 text-sm text-zinc-400 list-disc pl-5">
             {p.functionality?.map((x, i) => (
               <li key={i}>{x}</li>
@@ -162,7 +148,7 @@ const ProjectCard = ({ p }) => (
 const PublicationCard = ({ pub }) => (
   <Card>
     <div className="flex flex-col gap-2">
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h3 className="text-lg font-semibold text-zinc-100">{pub.title}</h3>
           <p className="text-sm text-zinc-400 mt-1">
@@ -198,33 +184,17 @@ const PublicationCard = ({ pub }) => (
 
       {pub.links && (
         <div className="mt-2 flex flex-wrap gap-2">
-          {pub.links.paper && (
-            <PillLink
-              href={pub.links.paper}
-              label="Paper"
-              icon={<span className="text-[12px]">📄</span>}
-            />
+          {pub.links.paper && pub.links.paper.trim() !== "" && (
+            <PillLink href={pub.links.paper} label="Paper" icon={<span className="text-[12px]">📄</span>} />
           )}
-          {pub.links.doi && (
-            <PillLink
-              href={pub.links.doi}
-              label="DOI"
-              icon={<span className="text-[12px]">⎋</span>}
-            />
+          {pub.links.doi && pub.links.doi.trim() !== "" && (
+            <PillLink href={pub.links.doi} label="DOI" icon={<span className="text-[12px]">⎋</span>} />
           )}
-          {pub.links.code && (
-            <PillLink
-              href={pub.links.code}
-              label="Code"
-              icon={<Logo kind="gh" />}
-            />
+          {pub.links.code && pub.links.code.trim() !== "" && (
+            <PillLink href={pub.links.code} label="Code" icon={<Logo kind="gh" />} />
           )}
-          {pub.links.slides && (
-            <PillLink
-              href={pub.links.slides}
-              label="Slides"
-              icon={<span className="text-[12px]">🖼</span>}
-            />
+          {pub.links.slides && pub.links.slides.trim() !== "" && (
+            <PillLink href={pub.links.slides} label="Slides" icon={<span className="text-[12px]">🖼</span>} />
           )}
         </div>
       )}
@@ -242,24 +212,17 @@ const profile = {
     "I am a Syrian/Dominican National",
     "I'm a big fan of Shinobis, and enjoy practicing Cross Country and Competitive Programming in my free time.",
   ],
-  avatar: "public//Hashem Altujar.jpg",
+  avatar: "/Hashem-Altujar.jpg",
   links: [
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/",
-      icon: "in",
-    },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/", icon: "in" },
     { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
-    {
-      label: "ResearchGate",
-      href: "https://www.researchgate.net/profile/Hashem-Altujar?ev=hdr_xprf",
-      icon: "sc",
-    },
-    {
-      label: "Resume",
-      href: "https://drive.google.com/file/d/1arfHC63LRx2-I72njRYmZhHId3K7Cap2/view?usp=sharing",
-      icon: "cv",
-    },
+    { label: "ResearchGate", href: "https://www.researchgate.net/profile/Hashem-Altujar?ev=hdr_xprf", icon: "sc" },
+    { label: "Resume", href: "https://drive.google.com/file/d/1arfHC63LRx2-I72njRYmZhHId3K7Cap2/view?usp=sharing", icon: "cv" },
+    // Internal jump links
+    { label: "Experience", href: "#experience", icon: "x" },
+    { label: "Projects", href: "#projects", icon: "x" },
+    { label: "Publications", href: "#publications", icon: "x" },
+    { label: "Skills", href: "#skills", icon: "x" },
     { label: "Contact", href: "#contact", icon: "x" },
   ],
 };
@@ -272,7 +235,7 @@ const experiences = [
     role: "Research Student",
     time: "09/2025 - Current",
     location: "Dhahran, Saudi Arabia",
-    logo: "./public/KFUPM_INNOVATION_BLACK.png",
+    logo: "/logos/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Developing a robotic hand for real-time speech-to-sign-language translation.",
       "Designed and assembled CAD model with 16 degrees of freedom.",
@@ -285,7 +248,7 @@ const experiences = [
     role: "Design & Assembly Lead",
     time: "10/2025 - Current",
     location: "Dhahran, Saudi Arabia",
-    logo: "./public/KRT.png",
+    logo: "/logos/KRT.png",
     bullets: [
       "Currently designing a 22 × 22 × 22 remote-controlled robot to compete in the annual VEX U Pushback 2025 Competition.",
       "Used AutoCAD to design the robot and assembled intake, outtake, and scoring mechanism through a system of motors, flex wheels, and pneumatics.",
@@ -296,7 +259,7 @@ const experiences = [
     role: "Research Student",
     time: "06/2025 - 10/2025",
     location: "KFUPM, Dhahran, Saudi Arabia",
-    logo: "./public/KFUPM_INNOVATION_BLACK.png",
+    logo: "/logos/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Designed and 3D-printed a weather-resistant sensor enclosure (AutoCAD, Fusion 360).",
       "Developed a hybrid drone-detection pipeline on NVIDIA Jetson Nano (Ubuntu) with real-time inference (15–20 FPS).",
@@ -309,7 +272,7 @@ const experiences = [
     role: "Research Student",
     time: "05/2025 - 10/2025",
     location: "KFUPM, Dhahran, Saudi Arabia",
-    logo: "./public/KFUPM_INNOVATION_BLACK.png",
+    logo: "/logos/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Primary author of a 2,700-word literature review on acoustic UAV detection pipelines and signal-processing workflows.",
       "Analyzed 20+ studies (2018–2024) and synthesized findings across noise filtering, feature engineering, classification, and cost effectiveness.",
@@ -322,18 +285,15 @@ const skills = [
   { category: "Programming Languages", items: ["Python"] },
   { category: "Backend", items: ["Git", "Linux"] },
   { category: "Machine Learning", items: ["TensorFlow", "NumPy", "Scikit-learn"] },
-  {
-    category: "Embedded Systems & Electronics",
-    items: ["Robotics", "Arduino", "Microcontrollers", "Jetson Nano"],
-  },
+  { category: "Embedded Systems & Electronics", items: ["Robotics", "Arduino", "Microcontrollers", "Jetson Nano"] },
   { category: "Design & Fabrication", items: ["3D Design (AutoCAD)", "3D Printing"] },
 ];
 
+// Put detailed screenshots in: /public/projects/
 const projects = [
   {
-    name: "Robotic Hand: Speech-to-Sign Translation (IN PROGRESS)",
-    tagline:
-      "Real-time speech → text → gloss → ASL motion on an embedded robot hand.",
+    name: "Robotic Hand: Speech-to-Sign Translation",
+    tagline: "Real-time speech → text → gloss → ASL motion on an embedded robot hand.",
     images: ["/projects/hand-1.jpg", "/projects/hand-2.jpg", "/projects/hand-3.jpg"],
     functionality: [
       "Speech-to-text pipeline optimized for embedded hardware",
@@ -354,12 +314,11 @@ const projects = [
   },
   {
     name: "Hybrid Drone Detection (Jetson Nano)",
-    tagline:
-      "Edge inference UAV detection with acoustic classification and DoA localization.",
+    tagline: "Edge inference UAV detection with acoustic classification and DoA localization.",
     images: [
-      "./public/Fusion_Drone_detection.png",
-      "./public/drone_detection_1.png",
-      "./public/drone_detection.png",
+      "/projects/Fusion_Drone_detection.png",
+      "/projects/drone_detection_1.png",
+      "/projects/drone_detection.png",
     ],
     functionality: [
       "Real-time inference pipeline (15–20 FPS)",
@@ -371,24 +330,20 @@ const projects = [
       "Low-latency processing on Ubuntu/Jetson Nano",
       "Modular pipeline suitable for field deployment",
     ],
-    stack: [
-      "TensorFlow",
-      "Jetson Nano",
-      "Ubuntu",
-      "Signal Processing",
-      "3D Printing",
-    ],
+    stack: ["TensorFlow", "Jetson Nano", "Ubuntu", "Signal Processing", "3D Printing"],
     links: {
-      github: "https://github.com/HaShinobi/Hybrid_Drone_Detection"
+      github: "https://github.com/HaShinobi/REPO_NAME_2",
+      details: "https://github.com/HaShinobi/REPO_NAME_2#readme",
+      demo: "",
     },
   },
 ];
 
-// ✅ Publications (edit links/title/authors as needed)
+// Put your real Paper/DOI links when you have them.
+// Empty strings won't render any buttons.
 const publications = [
   {
-    title:
-      "A Review of Acoustic Techniques for Drone Detection",
+    title: "Literature Review on Acoustic UAV Detection Pipelines and Signal-Processing Workflows",
     venue: "IEEE SCC 2025",
     year: "2025",
     authors: "Hashem Altujar",
@@ -397,25 +352,20 @@ const publications = [
     badges: ["Published"],
     tags: ["UAV", "Acoustics", "Signal Processing", "Literature Review"],
     links: {
-      paper: "https://www.researchgate.net/publication/398339228_A_Review_of_Acoustic_Techniques_for_Drone_Detection"
+      paper: "", // e.g. "https://ieeexplore.ieee.org/document/XXXXXXX"
+      doi: "",
+      code: "",
+      slides: "",
     },
   },
 ];
 
 const socials = [
   { label: "Email", href: "mailto:hashem.altujar@gmail.com", icon: "mail" },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/",
-    icon: "in",
-  },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/", icon: "in" },
   { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
   { label: "ORDCiD", href: "https://orcid.org/my-orcid?orcid=0009-0001-2021-6293", icon: "sc" },
-  {
-    label: "Resume",
-    href: "https://drive.google.com/file/d/1arfHC63LRx2-I72njRYmZhHId3K7Cap2/view?usp=sharing",
-    icon: "cv",
-  },
+  { label: "Resume", href: "https://drive.google.com/file/d/1arfHC63LRx2-I72njRYmZhHId3K7Cap2/view?usp=sharing", icon: "cv" },
 ];
 
 export default function App() {
@@ -430,12 +380,7 @@ export default function App() {
             </a>
             <nav className="flex flex-wrap gap-2">
               {profile.links.map((l) => (
-                <PillLink
-                  key={l.label}
-                  href={l.href}
-                  label={l.label}
-                  icon={<Logo kind={l.icon} />}
-                />
+                <PillLink key={l.label} href={l.href} label={l.label} icon={<Logo kind={l.icon} />} />
               ))}
             </nav>
           </div>
@@ -457,9 +402,7 @@ export default function App() {
               <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight">
                 Hey, I'm <span className="text-zinc-50">Hashem</span>!
               </h1>
-              <p className="mt-4 text-zinc-300 leading-relaxed max-w-2xl">
-                {profile.subtitle}
-              </p>
+              <p className="mt-4 text-zinc-300 leading-relaxed max-w-2xl">{profile.subtitle}</p>
 
               <div className="mt-6 flex flex-wrap gap-2">
                 <Tag>KSA KFUPM, Dhahran</Tag>
@@ -498,9 +441,7 @@ export default function App() {
                 {/* Content */}
                 <div className="flex flex-col gap-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="text-lg font-semibold text-zinc-100">
-                      {e.role}
-                    </h3>
+                    <h3 className="text-lg font-semibold text-zinc-100">{e.role}</h3>
                     {e.time && <Badge>{e.time}</Badge>}
                   </div>
 
@@ -539,29 +480,18 @@ export default function App() {
             <PublicationCard key={i} pub={pub} />
           ))}
         </div>
-
-
       </Section>
 
       {/* Technical Skills */}
       <Section id="skills" title="Technical Skills">
         <div className="overflow-hidden rounded-2xl border border-zinc-700/70">
           <div className="grid grid-cols-1 md:grid-cols-5 bg-zinc-950/40">
-            <div className="hidden md:block col-span-2 p-4 text-sm font-medium text-zinc-400">
-              Category
-            </div>
-            <div className="md:col-span-3 p-4 text-sm font-medium text-zinc-400">
-              Technologies
-            </div>
+            <div className="hidden md:block col-span-2 p-4 text-sm font-medium text-zinc-400">Category</div>
+            <div className="md:col-span-3 p-4 text-sm font-medium text-zinc-400">Technologies</div>
           </div>
           {skills.map((row, i) => (
-            <div
-              key={i}
-              className="grid grid-cols-1 md:grid-cols-5 border-t border-zinc-800"
-            >
-              <div className="md:col-span-2 p-4 text-zinc-200">
-                {row.category}
-              </div>
+            <div key={i} className="grid grid-cols-1 md:grid-cols-5 border-t border-zinc-800">
+              <div className="md:col-span-2 p-4 text-zinc-200">{row.category}</div>
               <div className="md:col-span-3 p-4">
                 <div className="flex flex-wrap gap-2">
                   {row.items.map((s) => (
@@ -587,9 +517,7 @@ export default function App() {
                 />
               </div>
               <div>
-                <label className="text-sm text-zinc-300">
-                  Email Address
-                </label>
+                <label className="text-sm text-zinc-300">Email Address</label>
                 <input
                   className="mt-1 w-full rounded-xl border border-zinc-700 bg-zinc-950/60 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-zinc-600"
                   placeholder="johndoe@example.com"
@@ -631,13 +559,7 @@ export default function App() {
                   <Logo kind={s.icon} />
                   <span>{s.label}</span>
                 </div>
-                <svg
-                  className="size-4 opacity-70"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
+                <svg className="size-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M7 17L17 7" />
                   <path d="M7 7h10v10" />
                 </svg>
@@ -653,8 +575,7 @@ export default function App() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-zinc-500">
             <div>Last Updated 05/01/2026</div>
             <div>
-              Made with <span className="text-zinc-200">♥</span> in{" "}
-              <span className="text-zinc-300">KFUPM, Dhahran</span>
+              Made with <span className="text-zinc-200">♥</span> in <span className="text-zinc-300">KFUPM, Dhahran</span>
             </div>
           </div>
         </Container>

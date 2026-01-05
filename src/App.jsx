@@ -287,7 +287,7 @@ const skills = [
 // Put detailed screenshots in: /public/projects/
 const projects = [
   {
-    name: "Robotic Hand: Speech-to-Sign Translation",
+    name: "Robotic Hand: Speech-to-Sign Translation (IN PROGRESS)",
     tagline: "Real-time speech → text → gloss → ASL motion on an embedded robot hand.",
     images: ["/projects/hand-1.jpg", "/projects/hand-2.jpg", "/projects/hand-3.jpg"],
     functionality: [
@@ -300,11 +300,7 @@ const projects = [
       "Jetson Orin Nano for real-time inference",
       "ROS-based control architecture for modularity",
     ],
-    stack: ["ROS", "Jetson Orin Nano", "CAD", "Embedded", "Robotics"],
-    links: {
-      github: "https://github.com/HaShinobi/REPO_NAME",
-      details: "https://github.com/HaShinobi/REPO_NAME#readme",
-      demo: "",
+    stack: ["ROS", "Jetson Orin Nano", "CAD", "Embedded", "Robotics"]
     },
   },
   {

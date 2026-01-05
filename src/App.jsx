@@ -235,7 +235,7 @@ const experiences = [
     role: "Research Student",
     time: "09/2025 - Current",
     location: "Dhahran, Saudi Arabia",
-    logo: "/logos/KFUPM_INNOVATION_BLACK.png",
+    logo: "/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Developing a robotic hand for real-time speech-to-sign-language translation.",
       "Designed and assembled CAD model with 16 degrees of freedom.",

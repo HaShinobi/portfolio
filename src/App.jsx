@@ -217,7 +217,7 @@ const profile = {
     { label: "LinkedIn", href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/", icon: "in" },
     { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
     { label: "ResearchGate", href: "https://www.researchgate.net/profile/Hashem-Altujar?ev=hdr_xprf", icon: "sc" },
-    { label: "Resume", href: "https://drive.google.com/file/d/1WrIYAL6NX20_O82nkXk6QaR3hZI7lWN5/view?usp=sharing", icon: "cv" },
+    { label: "Resume", href: "/Hashem_Resume.pdf", icon: "cv" },
     { label: "Contact", href: "#contact", icon: "x" },
   ],
 };
@@ -356,7 +356,7 @@ const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/", icon: "in" },
   { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
   { label: "ORDCiD", href: "https://orcid.org/my-orcid?orcid=0009-0001-2021-6293", icon: "sc" },
-  { label: "Resume", href: "https://drive.google.com/file/d/1WrIYAL6NX20_O82nkXk6QaR3hZI7lWN5/view?usp=sharing", icon: "cv" },
+  { label: "Resume", href: "/Hashem_Resume.pdf", icon: "cv" },
 ];
 
 export default function App() {

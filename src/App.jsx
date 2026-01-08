@@ -79,13 +79,25 @@ const ProjectCard = ({ p }) => (
 
         <div className="flex flex-wrap gap-2 shrink-0">
           {p.links?.github && (
-            <PillLink href={p.links.github} label="GitHub" icon={<Logo kind="gh" />} />
+            <PillLink
+              href={p.links.github}
+              label="GitHub"
+              icon={<Logo kind="gh" />}
+            />
           )}
           {p.links?.details && (
-            <PillLink href={p.links.details} label="More details" icon={<span className="text-[12px]">↗</span>} />
+            <PillLink
+              href={p.links.details}
+              label="More details"
+              icon={<span className="text-[12px]">↗</span>}
+            />
           )}
           {p.links?.demo && (
-            <PillLink href={p.links.demo} label="Live demo" icon={<span className="text-[12px]">▶</span>} />
+            <PillLink
+              href={p.links.demo}
+              label="Live demo"
+              icon={<span className="text-[12px]">▶</span>}
+            />
           )}
         </div>
       </div>
@@ -112,7 +124,9 @@ const ProjectCard = ({ p }) => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <div className="text-sm font-medium text-zinc-300 mb-2">Functionality</div>
+          <div className="text-sm font-medium text-zinc-300 mb-2">
+            Functionality
+          </div>
           <ul className="space-y-2 text-sm text-zinc-400 list-disc pl-5">
             {p.functionality?.map((x, i) => (
               <li key={i}>{x}</li>
@@ -185,16 +199,32 @@ const PublicationCard = ({ pub }) => (
       {pub.links && (
         <div className="mt-2 flex flex-wrap gap-2">
           {pub.links.paper && pub.links.paper.trim() !== "" && (
-            <PillLink href={pub.links.paper} label="Paper" icon={<span className="text-[12px]">📄</span>} />
+            <PillLink
+              href={pub.links.paper}
+              label="Paper"
+              icon={<span className="text-[12px]">📄</span>}
+            />
           )}
           {pub.links.doi && pub.links.doi.trim() !== "" && (
-            <PillLink href={pub.links.doi} label="DOI" icon={<span className="text-[12px]">⎋</span>} />
+            <PillLink
+              href={pub.links.doi}
+              label="DOI"
+              icon={<span className="text-[12px]">⎋</span>}
+            />
           )}
           {pub.links.code && pub.links.code.trim() !== "" && (
-            <PillLink href={pub.links.code} label="Code" icon={<Logo kind="gh" />} />
+            <PillLink
+              href={pub.links.code}
+              label="Code"
+              icon={<Logo kind="gh" />}
+            />
           )}
           {pub.links.slides && pub.links.slides.trim() !== "" && (
-            <PillLink href={pub.links.slides} label="Slides" icon={<span className="text-[12px]">🖼</span>} />
+            <PillLink
+              href={pub.links.slides}
+              label="Slides"
+              icon={<span className="text-[12px]">🖼</span>}
+            />
           )}
         </div>
       )}
@@ -214,9 +244,18 @@ const profile = {
   ],
   avatar: "/Hashem-Altujar.jpg",
   links: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/", icon: "in" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/",
+      icon: "in",
+    },
     { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
-    { label: "ResearchGate", href: "https://www.researchgate.net/profile/Hashem-Altujar?ev=hdr_xprf", icon: "sc" },
+    {
+      label: "ResearchGate",
+      href: "https://www.researchgate.net/profile/Hashem-Altujar?ev=hdr_xprf",
+      icon: "sc",
+    },
+    // Put Hashem_Resume.pdf inside /public
     { label: "Resume", href: "/Hashem_Resume.pdf", icon: "cv" },
     { label: "Contact", href: "#contact", icon: "x" },
   ],
@@ -279,8 +318,14 @@ const experiences = [
 const skills = [
   { category: "Programming Languages", items: ["Python", "Matlab"] },
   { category: "Backend", items: ["Git", "Linux"] },
-  { category: "Machine Learning", items: ["TensorFlow", "NumPy", "Scikit-learn"] },
-  { category: "Embedded Systems & Electronics", items: ["Robotics", "Arduino", "Microcontrollers", "Jetson Nano"] },
+  {
+    category: "Machine Learning",
+    items: ["TensorFlow", "NumPy", "Scikit-learn"],
+  },
+  {
+    category: "Embedded Systems & Electronics",
+    items: ["Robotics", "Arduino", "Microcontrollers", "Jetson Nano"],
+  },
   { category: "Design & Fabrication", items: ["3D Design (AutoCAD)", "3D Printing"] },
 ];
 
@@ -300,17 +345,12 @@ const projects = [
       "Jetson Orin Nano for real-time inference",
       "ROS-based control architecture for modularity",
     ],
-    stack: ["ROS", "Jetson Orin Nano", "CAD", "Embedded", "Robotics"]
-    },
+    stack: ["ROS", "Jetson Orin Nano", "CAD", "Embedded", "Robotics"],
   },
   {
     name: "Hybrid Drone Detection (Jetson Nano)",
     tagline: "Edge inference UAV detection with acoustic classification and DoA localization.",
-    images: [
-      "/Fusion_Drone_detection.png",
-      "/drone_detection_1.png",
-      "/drone_detection.png",
-    ],
+    images: ["/Fusion_Drone_detection.png", "/drone_detection_1.png", "/drone_detection.png"],
     functionality: [
       "Real-time inference pipeline (15–20 FPS)",
       "Acoustic ResNet classifier (~92% precision)",
@@ -343,7 +383,7 @@ const publications = [
     badges: ["Published"],
     tags: ["UAV", "Acoustics", "Signal Processing", "Literature Review"],
     links: {
-      paper: "https://www.researchgate.net/publication/398339228_A_Review_of_Acoustic_Techniques_for_Drone_Detection", // e.g. "https://ieeexplore.ieee.org/document/XXXXXXX"
+      paper: "https://www.researchgate.net/publication/398339228_A_Review_of_Acoustic_Techniques_for_Drone_Detection",
       doi: "",
       code: "",
       slides: "",
@@ -353,9 +393,18 @@ const publications = [
 
 const socials = [
   { label: "Email", href: "mailto:hashem.altujar@gmail.com", icon: "mail" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/", icon: "in" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/hashem-altujar-b7366419b/",
+    icon: "in",
+  },
   { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
-  { label: "ORDCiD", href: "https://orcid.org/my-orcid?orcid=0009-0001-2021-6293", icon: "sc" },
+  {
+    label: "ORDCiD",
+    href: "https://orcid.org/my-orcid?orcid=0009-0001-2021-6293",
+    icon: "sc",
+  },
+  // Put Hashem_Resume.pdf inside /public
   { label: "Resume", href: "/Hashem_Resume.pdf", icon: "cv" },
 ];
 
@@ -371,7 +420,12 @@ export default function App() {
             </a>
             <nav className="flex flex-wrap gap-2">
               {profile.links.map((l) => (
-                <PillLink key={l.label} href={l.href} label={l.label} icon={<Logo kind={l.icon} />} />
+                <PillLink
+                  key={l.label}
+                  href={l.href}
+                  label={l.label}
+                  icon={<Logo kind={l.icon} />}
+                />
               ))}
             </nav>
           </div>
@@ -393,7 +447,9 @@ export default function App() {
               <h1 className="mt-4 text-4xl sm:text-5xl font-bold tracking-tight">
                 Hey, I'm <span className="text-zinc-50">Hashem</span>!
               </h1>
-              <p className="mt-4 text-zinc-300 leading-relaxed max-w-2xl">{profile.subtitle}</p>
+              <p className="mt-4 text-zinc-300 leading-relaxed max-w-2xl">
+                {profile.subtitle}
+              </p>
 
               <div className="mt-6 flex flex-wrap gap-2">
                 <Tag>KSA KFUPM, Dhahran</Tag>
@@ -432,7 +488,9 @@ export default function App() {
                 {/* Content */}
                 <div className="flex flex-col gap-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <h3 className="text-lg font-semibold text-zinc-100">{e.role}</h3>
+                    <h3 className="text-lg font-semibold text-zinc-100">
+                      {e.role}
+                    </h3>
                     {e.time && <Badge>{e.time}</Badge>}
                   </div>
 
@@ -477,12 +535,21 @@ export default function App() {
       <Section id="skills" title="Technical Skills">
         <div className="overflow-hidden rounded-2xl border border-zinc-700/70">
           <div className="grid grid-cols-1 md:grid-cols-5 bg-zinc-950/40">
-            <div className="hidden md:block col-span-2 p-4 text-sm font-medium text-zinc-400">Category</div>
-            <div className="md:col-span-3 p-4 text-sm font-medium text-zinc-400">Technologies</div>
+            <div className="hidden md:block col-span-2 p-4 text-sm font-medium text-zinc-400">
+              Category
+            </div>
+            <div className="md:col-span-3 p-4 text-sm font-medium text-zinc-400">
+              Technologies
+            </div>
           </div>
           {skills.map((row, i) => (
-            <div key={i} className="grid grid-cols-1 md:grid-cols-5 border-t border-zinc-800">
-              <div className="md:col-span-2 p-4 text-zinc-200">{row.category}</div>
+            <div
+              key={i}
+              className="grid grid-cols-1 md:grid-cols-5 border-t border-zinc-800"
+            >
+              <div className="md:col-span-2 p-4 text-zinc-200">
+                {row.category}
+              </div>
               <div className="md:col-span-3 p-4">
                 <div className="flex flex-wrap gap-2">
                   {row.items.map((s) => (
@@ -550,7 +617,13 @@ export default function App() {
                   <Logo kind={s.icon} />
                   <span>{s.label}</span>
                 </div>
-                <svg className="size-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg
+                  className="size-4 opacity-70"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M7 17L17 7" />
                   <path d="M7 7h10v10" />
                 </svg>
@@ -566,7 +639,8 @@ export default function App() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-zinc-500">
             <div>Last Updated 05/01/2026</div>
             <div>
-              Made with <span className="text-zinc-200">♥</span> in <span className="text-zinc-300">KFUPM, Dhahran</span>
+              Made with <span className="text-zinc-200">♥</span> in{" "}
+              <span className="text-zinc-300">KFUPM, Dhahran</span>
             </div>
           </div>
         </Container>

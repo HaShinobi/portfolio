@@ -277,7 +277,7 @@ const experiences = [
 ];
 
 const skills = [
-  { category: "Programming Languages", items: ["Python"] },
+  { category: "Programming Languages", items: ["Python", "Matlab"] },
   { category: "Backend", items: ["Git", "Linux"] },
   { category: "Machine Learning", items: ["TensorFlow", "NumPy", "Scikit-learn"] },
   { category: "Embedded Systems & Electronics", items: ["Robotics", "Arduino", "Microcontrollers", "Jetson Nano"] },

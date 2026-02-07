@@ -334,7 +334,7 @@ const projects = [
     name: "KFUPM Robotics Team: Theeb",
     tagline:
       "Leader of Robot Theeb for the VEX 2026 National Competition",
-    images: ["/projects/krt_team.jpeg", "/projects/theeb.jpeg", "/projects/theeb2.png"],
+    images: ["./public/krt_team.jpeg", "./public/theeb.jpeg", "./public/theeb2.png"],
     functionality: [
       "4:3 Gear Ratio Base for higher torque",
       "L-Pathway with Pneumatic intake",

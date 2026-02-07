@@ -331,6 +331,27 @@ const skills = [
 
 const projects = [
   {
+    name: "KFUPM Robotics Team: Theeb",
+    tagline:
+      "Leader of Robot Theeb for the VEX 2026 National Competition",
+    images: ["./public/krt_team.jpeg", "./public/theeb.jpeg", "./public/theeb2.png"],
+    functionality: [
+      "4:3 Gear Ratio Base for higher torque",
+      "L-Pathway with Pneumatic intake",
+      "Color sorting mechanism to remove enemy balls.",
+    ],
+    design: [
+      "H-bridge drivetrain with 4 motors",
+      "14' x  18' x 20'"
+    ],
+    stack: ["VEX Pushback", "Robotics", "CAD", "Mechanical", "Leader"],
+    links: {
+      github: "https://github.com/HaShinobi/REPO_NAME",
+      details: "https://drive.google.com/file/d/1dGkBVYeNqGBXQcTXNkhISZzXhaKhiWgP/view?usp=sharing",
+      demo: "",
+    },
+  },
+  {
     name: "Robotic Hand: Speech-to-Sign Translation (IN PROGRESS)",
     tagline:
       "Real-time speech → text → gloss → ASL motion on an embedded robot hand.",

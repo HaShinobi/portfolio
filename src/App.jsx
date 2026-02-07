@@ -162,7 +162,7 @@ const ProjectCard = ({ p }) => (
 const PublicationCard = ({ pub }) => (
   <Card>
     <div className="flex flex-col gap-2">
-      <div className="flex flex-wrap items-start justify-between gap-3">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h3 className="text-lg font-semibold text-zinc-100">{pub.title}</h3>
           <p className="text-sm text-zinc-400 mt-1">
@@ -198,28 +198,28 @@ const PublicationCard = ({ pub }) => (
 
       {pub.links && (
         <div className="mt-2 flex flex-wrap gap-2">
-          {pub.links.paper && pub.links.paper.trim() !== "" && (
+          {pub.links.paper && (
             <PillLink
               href={pub.links.paper}
               label="Paper"
               icon={<span className="text-[12px]">📄</span>}
             />
           )}
-          {pub.links.doi && pub.links.doi.trim() !== "" && (
+          {pub.links.doi && (
             <PillLink
               href={pub.links.doi}
               label="DOI"
               icon={<span className="text-[12px]">⎋</span>}
             />
           )}
-          {pub.links.code && pub.links.code.trim() !== "" && (
+          {pub.links.code && (
             <PillLink
               href={pub.links.code}
               label="Code"
               icon={<Logo kind="gh" />}
             />
           )}
-          {pub.links.slides && pub.links.slides.trim() !== "" && (
+          {pub.links.slides && (
             <PillLink
               href={pub.links.slides}
               label="Slides"
@@ -242,7 +242,7 @@ const profile = {
     "I am a Syrian/Dominican National",
     "I'm a big fan of Shinobis, and enjoy practicing Cross Country and Competitive Programming in my free time.",
   ],
-  avatar: "/Hashem-Altujar.jpg",
+  avatar: "public//Hashem Altujar.jpg",
   links: [
     {
       label: "LinkedIn",
@@ -255,8 +255,11 @@ const profile = {
       href: "https://www.researchgate.net/profile/Hashem-Altujar?ev=hdr_xprf",
       icon: "sc",
     },
-    // Put Hashem_Resume.pdf inside /public
-    { label: "Resume", href: "/Hashem_Resume.pdf", icon: "cv" },
+    {
+      label: "Resume",
+      href: "https://drive.google.com/file/d/1arfHC63LRx2-I72njRYmZhHId3K7Cap2/view?usp=sharing",
+      icon: "cv",
+    },
     { label: "Contact", href: "#contact", icon: "x" },
   ],
 };
@@ -269,7 +272,7 @@ const experiences = [
     role: "Research Student",
     time: "09/2025 - Current",
     location: "Dhahran, Saudi Arabia",
-    logo: "/KFUPM_INNOVATION_BLACK.png",
+    logo: "./public/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Developing a robotic hand for real-time speech-to-sign-language translation.",
       "Designed and assembled CAD model with 16 degrees of freedom.",
@@ -282,7 +285,7 @@ const experiences = [
     role: "Design & Assembly Lead",
     time: "10/2025 - Current",
     location: "Dhahran, Saudi Arabia",
-    logo: "/KRT.png",
+    logo: "./public/KRT.png",
     bullets: [
       "Currently designing a 22 × 22 × 22 remote-controlled robot to compete in the annual VEX U Pushback 2025 Competition.",
       "Used AutoCAD to design the robot and assembled intake, outtake, and scoring mechanism through a system of motors, flex wheels, and pneumatics.",
@@ -293,7 +296,7 @@ const experiences = [
     role: "Research Student",
     time: "06/2025 - 10/2025",
     location: "KFUPM, Dhahran, Saudi Arabia",
-    logo: "/KFUPM_INNOVATION_BLACK.png",
+    logo: "./public/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Designed and 3D-printed a weather-resistant sensor enclosure (AutoCAD, Fusion 360).",
       "Developed a hybrid drone-detection pipeline on NVIDIA Jetson Nano (Ubuntu) with real-time inference (15–20 FPS).",
@@ -306,7 +309,7 @@ const experiences = [
     role: "Research Student",
     time: "05/2025 - 10/2025",
     location: "KFUPM, Dhahran, Saudi Arabia",
-    logo: "/KFUPM_INNOVATION_BLACK.png",
+    logo: "./public/KFUPM_INNOVATION_BLACK.png",
     bullets: [
       "Primary author of a 2,700-word literature review on acoustic UAV detection pipelines and signal-processing workflows.",
       "Analyzed 20+ studies (2018–2024) and synthesized findings across noise filtering, feature engineering, classification, and cost effectiveness.",
@@ -316,12 +319,9 @@ const experiences = [
 ];
 
 const skills = [
-  { category: "Programming Languages", items: ["Python", "Matlab"] },
+  { category: "Programming Languages", items: ["Python"] },
   { category: "Backend", items: ["Git", "Linux"] },
-  {
-    category: "Machine Learning",
-    items: ["TensorFlow", "NumPy", "Scikit-learn"],
-  },
+  { category: "Machine Learning", items: ["TensorFlow", "NumPy", "Scikit-learn"] },
   {
     category: "Embedded Systems & Electronics",
     items: ["Robotics", "Arduino", "Microcontrollers", "Jetson Nano"],
@@ -329,11 +329,32 @@ const skills = [
   { category: "Design & Fabrication", items: ["3D Design (AutoCAD)", "3D Printing"] },
 ];
 
-// Put detailed screenshots in: /public/projects/
 const projects = [
   {
+    name: "KFUPM Robotics Team: Theeb",
+    tagline:
+      "Leader of Robot Theeb for the VEX 2026 National Competition",
+    images: ["/projects/krt_team.jpeg", "/projects/theeb.jpeg", "/projects/theeb2.png"],
+    functionality: [
+      "4:3 Gear Ratio Base for higher torque",
+      "L-Pathway with Pneumatic intake",
+      "Color sorting mechanism to remove enemy balls.",
+    ],
+    design: [
+      "H-bridge drivetrain with 4 motors",
+      "14' x  18' x 20'"
+    ],
+    stack: ["VEX Pushback", "Robotics", "CAD", "Mechanical", "Leader"],
+    links: {
+      github: "https://github.com/HaShinobi/REPO_NAME",
+      details: "https://drive.google.com/file/d/1dGkBVYeNqGBXQcTXNkhISZzXhaKhiWgP/view?usp=sharing",
+      demo: "",
+    },
+  },
+  {
     name: "Robotic Hand: Speech-to-Sign Translation (IN PROGRESS)",
-    tagline: "Real-time speech → text → gloss → ASL motion on an embedded robot hand.",
+    tagline:
+      "Real-time speech → text → gloss → ASL motion on an embedded robot hand.",
     images: ["/projects/hand-1.jpg", "/projects/hand-2.jpg", "/projects/hand-3.jpg"],
     functionality: [
       "Speech-to-text pipeline optimized for embedded hardware",
@@ -346,11 +367,21 @@ const projects = [
       "ROS-based control architecture for modularity",
     ],
     stack: ["ROS", "Jetson Orin Nano", "CAD", "Embedded", "Robotics"],
+    links: {
+      github: "https://github.com/HaShinobi/REPO_NAME",
+      details: "https://github.com/HaShinobi/REPO_NAME#readme",
+      demo: "",
+    },
   },
   {
     name: "Hybrid Drone Detection (Jetson Nano)",
-    tagline: "Edge inference UAV detection with acoustic classification and DoA localization.",
-    images: ["/Fusion_Drone_detection.png", "/drone_detection_1.png", "/drone_detection.png"],
+    tagline:
+      "Edge inference UAV detection with acoustic classification and DoA localization.",
+    images: [
+      "./public/Fusion_Drone_detection.png",
+      "./public/drone_detection_1.png",
+      "./public/drone_detection.png",
+    ],
     functionality: [
       "Real-time inference pipeline (15–20 FPS)",
       "Acoustic ResNet classifier (~92% precision)",
@@ -361,20 +392,24 @@ const projects = [
       "Low-latency processing on Ubuntu/Jetson Nano",
       "Modular pipeline suitable for field deployment",
     ],
-    stack: ["TensorFlow", "Jetson Nano", "Ubuntu", "Signal Processing", "3D Printing"],
+    stack: [
+      "TensorFlow",
+      "Jetson Nano",
+      "Ubuntu",
+      "Signal Processing",
+      "3D Printing",
+    ],
     links: {
-      github: "https://github.com/HaShinobi/REPO_NAME_2",
-      details: "https://github.com/HaShinobi/REPO_NAME_2#readme",
-      demo: "",
+      github: "https://github.com/HaShinobi/Hybrid_Drone_Detection"
     },
   },
 ];
 
-// Put your real Paper/DOI links when you have them.
-// Empty strings won't render any buttons.
+// ✅ Publications (edit links/title/authors as needed)
 const publications = [
   {
-    title: "A Review of Acoustic Techniques for Drone Detection",
+    title:
+      "A Review of Acoustic Techniques for Drone Detection",
     venue: "IEEE SCC 2025",
     year: "2025",
     authors: "Hashem Altujar",
@@ -383,10 +418,7 @@ const publications = [
     badges: ["Published"],
     tags: ["UAV", "Acoustics", "Signal Processing", "Literature Review"],
     links: {
-      paper: "https://www.researchgate.net/publication/398339228_A_Review_of_Acoustic_Techniques_for_Drone_Detection",
-      doi: "",
-      code: "",
-      slides: "",
+      paper: "https://www.researchgate.net/publication/398339228_A_Review_of_Acoustic_Techniques_for_Drone_Detection"
     },
   },
 ];
@@ -399,13 +431,12 @@ const socials = [
     icon: "in",
   },
   { label: "GitHub", href: "https://github.com/HaShinobi", icon: "gh" },
+  { label: "ORDCiD", href: "https://orcid.org/my-orcid?orcid=0009-0001-2021-6293", icon: "sc" },
   {
-    label: "ORDCiD",
-    href: "https://orcid.org/my-orcid?orcid=0009-0001-2021-6293",
-    icon: "sc",
+    label: "Resume",
+    href: "https://drive.google.com/file/d/1arfHC63LRx2-I72njRYmZhHId3K7Cap2/view?usp=sharing",
+    icon: "cv",
   },
-  // Put Hashem_Resume.pdf inside /public
-  { label: "Resume", href: "/Hashem_Resume.pdf", icon: "cv" },
 ];
 
 export default function App() {
@@ -529,6 +560,8 @@ export default function App() {
             <PublicationCard key={i} pub={pub} />
           ))}
         </div>
+
+
       </Section>
 
       {/* Technical Skills */}
@@ -575,7 +608,9 @@ export default function App() {
                 />
               </div>
               <div>
-                <label className="text-sm text-zinc-300">Email Address</label>
+                <label className="text-sm text-zinc-300">
+                  Email Address
+                </label>
                 <input
                   className="mt-1 w-full rounded-xl border border-zinc-700 bg-zinc-950/60 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-zinc-600"
                   placeholder="johndoe@example.com"
